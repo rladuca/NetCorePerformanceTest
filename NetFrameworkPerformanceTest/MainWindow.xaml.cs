@@ -58,7 +58,7 @@ namespace NetFrameworkPerformanceTest
         public ViewModel()
         {
             var items = new ObservableCollection<Item>();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 3000; i++)
                 items.Add(new Item(i, $"Item{i}", i % 2 == 0, DateTime.Now.AddHours(i)));
             Items = items;
         }
@@ -68,10 +68,10 @@ namespace NetFrameworkPerformanceTest
     {
         public Item(int id, string name, bool isChecked, DateTime date)
         {
-            Id = Id2 = Id3 = id;
-            Name = Name2 = Name3 = name;
-            IsChecked = IsChecked2 = IsChecked3 = isChecked;
-            Date = Date2 = Date3 = date;
+            Id = Id2 = Id3 = Id4 = id;
+            Name = Name2 = Name3 = Name4 = name;
+            IsChecked = IsChecked2 = IsChecked3 = IsChecked4 = isChecked;
+            Date = Date2 = Date3 = Date4 = date;
         }
         public int Id { get; set; }
         public string Name { get; set; }
@@ -85,5 +85,9 @@ namespace NetFrameworkPerformanceTest
         public string Name3 { get; set; }
         public bool IsChecked3 { get; set; }
         public DateTime Date3 { get; set; }
+        public int Id4 { get; set; }
+        public string Name4 { get; set; }
+        public bool IsChecked4 { get; set; }
+        public DateTime Date4 { get; set; }
     }
 }
