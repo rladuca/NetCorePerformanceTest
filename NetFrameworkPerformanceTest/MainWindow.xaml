@@ -11,7 +11,10 @@
     </Window.DataContext>
     <DockPanel>
         <ToolBar DockPanel.Dock="Top">
-            <Button Content="Scroll to bottom" Click="Button_Click" />
+            <StackPanel>
+                <Button Content="Warmup" Click="Button_Click_1"/>
+                <Button Content="Scroll to bottom" Click="Button_Click" />
+            </StackPanel>
         </ToolBar>
         <DataGrid x:Name="dataGrid" AutoGenerateColumns="True" ItemsSource="{Binding Items}" />
     </DockPanel>

@@ -50,6 +50,12 @@ namespace NetFrameworkPerformanceTest
             }
             return child;
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var scrollViewer = GetVisualChild<ScrollViewer>(dataGrid);
+            ScrollDown(scrollViewer, () => { scrollViewer.ScrollToTop(); });
+        }
     }
 
     public class ViewModel
